@@ -1,0 +1,5 @@
+set (libname "kx0221020")
+set (libdescription "upm KX022-1020 sensor module")
+set (module_src ${libname}.cxx)
+set (module_h ${libname}.h)
+upm_module_init()
