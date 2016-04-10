@@ -1,0 +1,5 @@
+set (libname "bm1383glv")
+set (libdescription "upm BM1383GLV sensor module")
+set (module_src ${libname}.cxx)
+set (module_h ${libname}.h)
+upm_module_init()
