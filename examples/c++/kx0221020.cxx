@@ -72,16 +72,16 @@ main()
   accelerometer->installISR(24, data_callback, NULL);
   accelerometer->setSleep(false);
 
-    while (shouldRun) {
-      sleep(1);
-    }
+  while (shouldRun) {
+    sleep(1);
+  }
 
-    //! [Interesting]
-    cout << "Exiting" << endl;
+  //! [Interesting]
+  cout << "Exiting" << endl;
 
-    accelerometer->setSleep(true);
+  accelerometer->setSleep(true);
 
-    delete accelerometer;
+  delete accelerometer;
 
-    return 0;
+  return 0;
 }
