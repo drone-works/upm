@@ -207,7 +207,7 @@ KX0221020::setRate(KX0221020_RATE_T rate)
   default: // should never occur, but...
     m_rate = 1.0; // set a safe, though incorrect value
     throw std::logic_error(string(__FUNCTION__) + 
-			   ": internal error, unsupported range");
+			   ": internal error, unsupported rate");
     break;
   }
 
