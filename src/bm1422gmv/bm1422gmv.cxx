@@ -188,7 +188,7 @@ BM1422GMV::setMode(BM1422GMV_MODE_T mode, BM1422GMV_PREC_T prec,
     throw std::logic_error(string(__FUNCTION__) + 
                              ": internal error, unsupported rate");
   }
-  m_prec = prec;
+  m_rate = rate;
   
   return true;
 }
