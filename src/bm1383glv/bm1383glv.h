@@ -241,7 +241,7 @@ namespace upm {
 
 #if defined(SWIGJAVA) || defined(JAVACALLBACK)
     /**
-     * get the magnetometer values
+     * get the pressure value
      *
      * @return Memory containing the pressure value
      */
