@@ -318,7 +318,7 @@ bool
 RPR0521RS::getAmbientLight(uint16_t *x)
 {
   uint8_t buffer[2];
-  readRegs(REG_ALS_DADA0_L, buffer, sizeof(buffer));
+  readRegs(REG_ALS_DATA0_L, buffer, sizeof(buffer));
 
   m_als_data0 = (uint16_t)((buffer[1] << 8) | buffer[0]);
   // ALS 20Hz(50ms) mode needs a special handling
@@ -337,7 +337,7 @@ bool
 RPR0521RS::getAmbientLightIr(uint16_t *x)
 {
   uint8_t buffer[2];
-  readRegs(REG_ALS_DADA1_L, buffer, sizeof(buffer));
+  readRegs(REG_ALS_DATA1_L, buffer, sizeof(buffer));
 
   m_als_data1 = (uint16_t)((buffer[1] << 8) | buffer[0]);
   // ALS 20Hz(50ms) mode needs a special handling
@@ -356,7 +356,7 @@ bool
 RPR0521RS::getProximity(uint16_t *x)
 {
   uint8_t buffer[2];
-  readRegs(REG_PS_DADA_L, buffer, sizeof(buffer));
+  readRegs(REG_PS_DATA_L, buffer, sizeof(buffer));
 
   m_ps_data = (uint16_t)((buffer[1] << 8) | buffer[0]);
 
