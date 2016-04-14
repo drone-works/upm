@@ -208,6 +208,14 @@ BM1422GMV::setAverageFilter(BM1422GMV_AVER_T aver)
 }
 
 bool
+BM1422GMV::getStatus(bool& drdy)
+{
+  drdy = ((readReg(REG_STA1) & STA1_DRDY) != 0);
+
+  return true;
+}
+
+bool
 BM1422GMV::getMagnetometer(float *x, float *y, float *z)
 {
   uint8_t buffer[6];

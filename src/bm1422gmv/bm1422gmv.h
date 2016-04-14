@@ -247,7 +247,16 @@ namespace upm {
     bool setAverageFilter(BM1422GMV_AVER_T aver=AVER_4);
 
     /**
+     * get status
+     *
+     * @param drdy data ready flag
+     * @return true if successful, false otherwise
+     */
+    bool getStatus(bool& drdy);
+
+    /**
      * get the magnetometer values
+     *  NOTE: Data ready flag will be cleared with this
      *
      * @param x the returned x value, if arg is non-NULL
      * @param y the returned y value, if arg is non-NULL
@@ -283,6 +292,12 @@ namespace upm {
      *
      */
     void uninstallISR();
+
+    /**
+     * default no-op interrupt handler
+     *
+     */
+    static void defaultISR(void *) {};
 
   protected:
     // magnetometer values
