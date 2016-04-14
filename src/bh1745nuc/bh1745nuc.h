@@ -282,6 +282,12 @@ namespace upm {
      */
     void uninstallISR();
 
+    /**
+     * default no-op interrupt handler.
+     *
+     */
+    static void defaultISR(void *) {};
+
   protected:
     // color data values
     uint16_t m_red;
