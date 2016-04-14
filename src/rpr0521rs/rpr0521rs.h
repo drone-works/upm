@@ -391,6 +391,12 @@ namespace upm {
      */
     void uninstallISR();
 
+    /**
+     * default no-op interrupt handler.
+     *
+     */
+    static void defaultISR(void *) {};
+
   protected:
     // optical values
     uint16_t m_als_data0;
