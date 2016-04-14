@@ -409,6 +409,12 @@ namespace upm {
      */
     void uninstallISR();
 
+    /**
+     * default no-op interrupt handler
+     *
+     */
+    static void defaultISR(void *) {};
+
   protected:
     // accelerometer values
     float m_accelX;
