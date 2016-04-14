@@ -365,7 +365,7 @@ namespace upm {
     bool clearInterrupt();
 
     /**
-     * get interrupt status
+     * get # of acceleration data in FIFO
      *
      * @return # of acceleration data in FIFO
      */
