@@ -310,6 +310,16 @@ namespace upm {
     uint8_t readReg(uint8_t reg);
 
     /**
+     * read contiguous refister into a buffer
+     *
+     * @param reg the register to start reading at
+     * @param buffer the buffer to store the results
+     * @param len the number of registers to read
+     * @return the value of the register
+     */
+    void readRegs(uint8_t reg, uint8_t *buffer, int len);
+
+    /**
      * write to a register
      *
      * @param reg the register to write to

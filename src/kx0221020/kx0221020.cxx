@@ -65,6 +65,12 @@ KX0221020::readReg(uint8_t reg)
   return m_i2c.readReg(reg);
 }
 
+void
+KX0221020::readRegs(uint8_t reg, uint8_t *buffer, int len)
+{
+  m_i2c.readBytesReg(reg, buffer, len);
+}
+
 bool
 KX0221020::writeReg(uint8_t reg, uint8_t val)
 {
@@ -252,8 +258,7 @@ bool
 KX0221020::getAccelerometer(float *x, float *y, float *z)
 {
   uint8_t buffer[6];
-  for (int i = 0; i < 6; i++)
-    buffer[i] = readReg(REG_BUF_READ);
+  readRegs(REG_BUF_READ, buffer, sizeof(buffer));
 
   int16_t ax, ay, az;
   ax = ((buffer[1] << 8) | buffer[0]);
